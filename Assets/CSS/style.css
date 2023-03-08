@@ -1,0 +1,298 @@
+:root
+{
+    --btnPrinCol:#D2FA6E;
+    --btnSecCol:#88AD2A;
+    --textColor:#211B1B;
+    --secColor: #DE8AFF;
+}
+
+
+@font-face
+{
+    font-family: 'Lato';
+    src:url('../Polices/Lato/Lato-Regular.ttf') format('.ttf');
+    src:url('../Polices/Lato/Lato-Bold.ttf') format('.ttf');
+}
+
+body
+{
+    margin: 0;
+    padding: 0;
+}
+                                /* Polices */
+header, button
+{
+    font-family: 'Segoe UI', sans-serif;
+}
+
+footer
+{
+    font-family: 'Lato',sans-serif;
+}
+
+main h2, footer h2
+{
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+}
+
+main
+{
+    color: #211B1B;
+}
+
+                                /* Boutons */
+.btnPrin
+{
+    background-color: var(--btnPrinCol);
+    border: 2px solid darkgrey;
+    border-radius: 0;
+}
+
+.btnSec
+{
+    background-color: var(--btnSecCol);
+    border: 2px solid darkgrey;
+    border-radius: 0;
+}
+
+.btnMobile
+{
+    min-width: 3rem;
+    max-height: 40px;
+}
+
+                                /* Element responsive */
+.cacherBase, .cacherBtnBase
+{
+    display: none;
+}
+    /* Bouton back to top */
+#backToTop 
+{
+display: none; 
+position: fixed; 
+bottom: 20px; 
+right: 30px; 
+z-index: 99; 
+border: none; 
+outline: none; 
+background-color: var(--secColor); 
+color: var(--textColor); 
+padding: 15px; 
+border-radius: 10px; 
+font-size: 18px; 
+}
+                                /*Header*/
+header
+{
+    background: linear-gradient(90deg, rgba(141,59,173,1) 0%, rgba(210,110,250,0.8) 100%);
+}    
+  
+                        /*Navigation*/
+
+#menu ul, #menuH ul
+{
+    list-style: none;
+        width: 100%;
+        margin: 0;
+        padding: 20px 0;
+        
+}
+
+#menu ul li, #menuH ul li
+{
+        width: 25%;
+        text-align: center;
+        font-variant: small-caps;
+}
+
+#menu ul li a, #menu ul li a:visited, #menuH ul li a, #menuH ul li a:visited
+{
+    color: var(--textColor);
+    font-size: 30px;
+}
+    
+#menu ul li a:hover, #menuH ul li a:hover
+{
+    color: var(--btnPrinCol);
+}
+
+                     /*Recherche et connexion*/
+
+#recherche
+{
+    width: 75%;
+    height: 32px;
+    font-size: 14px;
+}
+
+.forCo input, .forCo input:focus-visible
+{
+    border: none;
+    border-bottom: 1px solid darkgrey;
+    margin-right: 5px;
+    outline: none;
+}
+
+.forCo input:focus-visible
+{
+    border-bottom: 2px solid black;
+}
+
+
+                                /* Main */
+
+             /* Modification du formulaire */
+main form label
+{
+	min-width: 110px;
+}
+
+main form input, main form textarea
+{
+    margin-top: 15px;
+	margin-left: 10px;
+
+}
+
+main form input:focus, main form textarea:focus
+{
+    border: 5px solid var(--secColor);
+}
+
+             /* Partie filtre de la vitrine*/
+.filtre
+{
+    text-align: center;
+}
+
+ul
+{
+    list-style-type: none;
+}
+
+.btnCanvas
+{
+	padding:0;
+	height: 40px;
+	background-color: var(--secColor);
+}
+
+                        /*Partie Liste de la vitrine*/
+                        
+                /*Bouton contact*/
+
+.butFont
+{
+    font-size:15px;
+}
+
+.prixListe
+{
+    font-size:40px;
+}
+
+                /*Boutons achat*/
+.buyBut
+{
+    width: 47%;
+    background-color: var(--btnPrinCol);
+    margin-right: 2%;
+}
+
+.cartBut
+{
+    width: 47%;
+    background-color: var(--btnSecCol);
+}
+
+.cover
+{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+                                /* Footer */
+footer
+{
+	background: rgb(129,66,152);
+	background: linear-gradient(90deg, rgba(203,85,250,0.8) 0%, rgba(129,66,152,1) 100%);
+}
+
+footer h1
+{
+    font-size: 24px;
+	font-weight: 700;
+    color: var(--textColor);
+}
+
+footer ul
+{
+    list-style-type: none;
+    text-align: left;
+}
+
+footer a
+{
+	color: var(--textColor);
+}
+
+
+                                /*Responsive*/
+
+@media all and (max-width: 768px)
+{
+    footer .cacherBase
+    {
+        display: block;
+        width: 0%;
+        padding: 0;
+    }
+
+    footer .cacher, footer .cacherFoot
+    {
+        display: none;
+    }
+
+    main h1
+    {
+        font-size:1.2rem
+    }
+
+	.infoBlock
+	{
+		margin-top: 10px;
+	}
+
+    #backToTop
+    {
+        display: block;
+    }
+}
+
+@media all and (max-width: 1400px)
+{
+  #recherche
+    {
+        height: 25px;
+    }
+}
+
+@media all and (min-width: 1400px)
+{
+    .cacherLaptop
+        {
+            display: none;
+        }
+
+    header .cacherBase, .cacherBtnBase
+        {
+            display: block;
+        }
+    
+    .collapse
+    {
+        display: none;
+    }
+}
